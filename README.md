@@ -3,7 +3,7 @@ Parameter estimation Demo by Unscented Kalman Filter (UKF) [1-2].
 
 Example of dynamics is for the 1 DoF arm with spring, damping, and frictional forces at a joint.
 
-Joint angle is measured, then, unknown damping and frictional coefficients are identified.
+Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [3].
 
 In spite of discontinuous model of frictional force, UKF can be applied dislike Extended Kalman Filter (EKF). 
 
@@ -53,3 +53,5 @@ Identified damping and friction coefficients; $c$ and $\mu$, respectively.
 
 [2] Julier, S.J., Uhlmann, J.K., Durrant-Whyte, H.F., 1995. A new approach for filtering nonlinear systems. In: Proceedings of 1995 American Control
 Conference. ACC’95 3, pp. 1628–1632. http://dx.doi.org/10.1109/ACC.1995.529783.
+
+[3] 足立 修一，丸田 一郎，「カルマンフィルタの基礎」，東京電機大学出版局．
