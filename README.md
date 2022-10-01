@@ -5,6 +5,8 @@ Example of dynamics is for the 1 DoF arm with spring, damping, and frictional fo
 
 Joint angle is measured, then, unknown damping and frictional coefficients are identified.
 
+In spite of discontinuous model of frictional force, UKF can be applied dislike Extended Kalman Filter (EKF). 
+
 ## Overview
 
 
