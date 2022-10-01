@@ -43,7 +43,7 @@ x_2 \\
 f( {\bf x}, {\bf u}) :=
 \left[
 \begin{array}{c}
-\dot{\theta} \\
+x_2 \\
 -J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1} x_1 \\
 \end{array}
 \right] + {\bf B} u,
