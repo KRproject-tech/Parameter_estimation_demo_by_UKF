@@ -39,12 +39,12 @@ x_2 \\
 \theta \\
 \dot{\theta} \\
 \end{array}
-\right], \
+\right], 
 f( \bf{x}, \bf{u}) :=
 \left[
 \begin{array}{c}
 \dot{\theta} \\
-- J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1} x_1 \\
+-J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1} x_1 \\
 \end{array}
 \right],
 $$
