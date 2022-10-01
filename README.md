@@ -3,7 +3,7 @@ Parameter estimation Demo by Unscented Kalman Filter (UKF) [1-2].
 
 Example of dynamics is for the 1 DoF arm with spring, damping, and frictional forces at a joint.
 
-Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [3].
+Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [3-4].
 
 In spite of discontinuous model of frictional force, UKF can be applied dislike Extended Kalman Filter (EKF). 
 
@@ -16,7 +16,7 @@ J \ddot{\theta} + c \dot{\theta} + \mu {\rm sgn}{\dot{\theta}} + k \theta = u,
 $$
 
 where damping and friction coefficients; $c$ and $\mu$ are unknown variables.
-From measured time series of data $\theta(t)$, these variables are identified by UKF.
+From measured time series of data $y_m := \theta_m(t)$, these variables are identified by UKF.
 
 Then, state space representation is denoted as,
 
@@ -123,3 +123,7 @@ Identified damping and friction coefficients; $c$ and $\mu$, respectively.
 Conference. ACC’95 3, pp. 1628–1632. http://dx.doi.org/10.1109/ACC.1995.529783.
 
 [3] 足立 修一，丸田 一郎，「カルマンフィルタの基礎」，東京電機大学出版局．
+
+[4] Fluid force identification acting on snake-like robots swimming in viscous fluids, Journal of Fluids and Structures, Vol. 106 (2021).
+
+https://doi.org/10.1016/j.jfluidstructs.2021.103351
