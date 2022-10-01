@@ -16,8 +16,39 @@ J \ddot{\theta} + c \dot{\theta} + \mu {\rm sgn}{\dot{\theta}} + k \theta = u,
 $$
 
 where damping and friction coefficients; $c$ and $\mu$ are unknown variables.
-
 From measured time series of data $\theta(t)$, these variables are identified by UKF.
+
+Then, state space representation is denoted as,
+
+$$
+\bf{\dot{x}} = f( \bf{x}, \bf{u}),
+$$
+
+where
+
+$$
+\bf{x} =
+\left[
+\begin{array}{c}
+x_1 \\
+x_2 \\
+\end{array}
+\right] :=
+\left[
+\begin{array}{c}
+\theta \\
+\dot{\theta} \\
+\end{array}
+\right], \
+f( \bf{x}, \bf{u}) :=
+\left[
+\begin{array}{c}
+\dot{\theta} \\
+- J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1} x_1 \\
+\end{array}
+\right],
+$$
+
 
 ## Usages
 
