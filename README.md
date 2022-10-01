@@ -22,6 +22,7 @@ Then, state space representation is denoted as,
 
 $$
 {\bf \dot{x}} = f( {\bf x}, {\bf u}),
+y = {\bf C} {\bf x},
 $$
 
 where
@@ -53,7 +54,14 @@ x_2 \\
 0 \\
 J^{-1} \\
 \end{array}
-\right]
+\right],
+{\bf C} := 
+\left[
+\begin{array}{c}
+1 \\
+0 \\
+\end{array}
+\right]^T
 $$
 
 Unknown damping and frictional coefficients are added to the expanded state vector as
