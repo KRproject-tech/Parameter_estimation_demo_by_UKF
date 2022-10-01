@@ -84,7 +84,7 @@ c \\
 \right]
 $$
 
-After that, the dynamics is discretized for time to apply UKF.
+After that, the dynamics is discretized for time to apply UKF ("c2d_func.m" [3]).
 
 
 ## Usages
