@@ -9,6 +9,15 @@ In spite of discontinuous model of frictional force, UKF can be applied dislike 
 
 ## Overview
 
+Dynamics for the 1 DoF arm with spring, damping, and frictional forces at a joint is denoted as follows,
+
+$$
+J \ddot{\theta} + c \dot{\theta} + \mu {\rm sgn}{\dot{\theta}} + k \theta = u,
+$$
+
+where damping and friction coefficients; $c$ and $\mu$ are unknown variables.
+
+From measured time series of data $\theta(t)$, these variables are identified by UKF.
 
 ## Usages
 
@@ -25,16 +34,16 @@ Execute "demo.m".
 
 ![response](https://user-images.githubusercontent.com/114337358/193397387-294ff43d-8803-481f-b96c-6bae43ab9b28.png)
 
-Time series of state $ x_1 := \theta (t) $.
+Time series of state $x_1 := \theta (t)$.
 
 
 ![untitled](https://user-images.githubusercontent.com/114337358/193397522-72f5e6e8-20ad-4821-932b-a2290c713a68.png)
 
-Time series of output $ y(t) := x_1(t)  $
+Time series of output $y(t) := x_1(t)$
 
 ![identified](https://user-images.githubusercontent.com/114337358/193397390-ce971b27-1378-4827-be87-016376857eca.png)
 
-Identified damping and friction coefficients; $ c $ and $ \mu $, respectively.
+Identified damping and friction coefficients; $c$ and $\mu$, respectively.
 
 
 
