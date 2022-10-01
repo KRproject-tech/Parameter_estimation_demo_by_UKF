@@ -1,6 +1,10 @@
 # Parameter_estimation_demo_by_UKF
 Parameter estimation Demo by Unscented Kalman Filter (UKF) [1-2].
 
+Example of dynamics is for the 1 DoF arm with spring, damping, and frictional forces at a joint.
+
+Joint angle is measured, then, unknown damping and frictional coefficients are identified.
+
 ## Overview
 
 
