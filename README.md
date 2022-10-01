@@ -56,6 +56,28 @@ J^{-1} \\
 \right]
 $$
 
+Unknown damping and frictional coefficients are added to the expanded state vector as
+
+$$
+{\bf x_E} =
+\left[
+\begin{array}{c}
+{\bf x} \\
+x_3 \\
+x_4 \\
+\end{array}
+\right] :=
+\left[
+\begin{array}{c}
+{\bf x} \\
+c \\
+\mu \\
+\end{array}
+\right]
+$$
+
+After that, the dynamics is discretized for time to apply UKF.
+
 
 ## Usages
 
