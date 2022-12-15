@@ -1,9 +1,9 @@
 # Parameter_estimation_demo_by_UKF
-Parameter estimation Demo by Unscented Kalman Filter (UKF) [1-2].
+Parameter estimation Demo by Unscented Kalman Filter (UKF) [^1][^2].
 
 Example of dynamics is for the 1 DoF arm with spring, damping, and frictional forces at a joint.
 
-Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [3-4].
+Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [^3][^4].
 
 In spite of discontinuous model of frictional force, UKF can be applied dislike Extended Kalman Filter (EKF). 
 
@@ -115,15 +115,13 @@ Identified damping and friction coefficients; $c$ and $\mu$, respectively.
 
 
 
-## References
+### References
+[^1]: Julier, S.J., Uhlmann, J.K., 2004. Unscented filtering and nonlinear estimation. Proc. IEEE 92 (3), 401–422.
 
-[1] Julier, S.J., Uhlmann, J.K., 2004. Unscented filtering and nonlinear estimation. Proc. IEEE 92 (3), 401–422.
-
-[2] Julier, S.J., Uhlmann, J.K., Durrant-Whyte, H.F., 1995. A new approach for filtering nonlinear systems. In: Proceedings of 1995 American Control
+[^2]: Julier, S.J., Uhlmann, J.K., Durrant-Whyte, H.F., 1995. A new approach for filtering nonlinear systems. In: Proceedings of 1995 American Control
 Conference. ACC’95 3, pp. 1628–1632. http://dx.doi.org/10.1109/ACC.1995.529783.
 
-[3] 足立 修一，丸田 一郎，「カルマンフィルタの基礎」，東京電機大学出版局．
+[^3]: 足立 修一，丸田 一郎，「カルマンフィルタの基礎」，東京電機大学出版局．
 
-[4] Fluid force identification acting on snake-like robots swimming in viscous fluids, Journal of Fluids and Structures, Vol. 106 (2021).
-
+[^4]: Fluid force identification acting on snake-like robots swimming in viscous fluids, Journal of Fluids and Structures, Vol. 106 (2021).  
 https://doi.org/10.1016/j.jfluidstructs.2021.103351
