@@ -1,4 +1,12 @@
 # Parameter_estimation_demo_by_UKF
+
+**Communication**
+
+<a style="text-decoration: none" href="https://twitter.com/hogelungfish" target="_blank">
+    <img src="https://img.shields.io/badge/twitter-%40hogelungfish-1da1f2.svg" alt="Twitter">
+</a>
+<p>
+
 Parameter estimation Demo by Unscented Kalman Filter (UKF) [^1][^2].
 
 Example of dynamics is for the 1 DoF arm with spring, damping, and frictional forces at a joint.
