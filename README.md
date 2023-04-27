@@ -32,8 +32,10 @@ From measured time series of data $y_m := \theta_m(t)$, these variables are iden
 Then, state space representation is denoted as,
 
 $$
-{\bf \dot{x}} = f( {\bf x}, {\bf u}),
+\begin{array}{c}
+{\bf \dot{x}} = f( {\bf x}, {\bf u}), \\
 y = {\bf C} {\bf x},
+\end{array}
 $$
 
 where
