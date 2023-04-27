@@ -41,6 +41,7 @@ $$
 where
 
 $$
+\begin{array}{c}
 {\bf x} =
 \left[
 \begin{array}{c}
@@ -53,21 +54,21 @@ x_2 \\
 \theta \\
 \dot{\theta} \\
 \end{array}
-\right], 
+\right], \\
 f( {\bf x}, {\bf u}) :=
 \left[
 \begin{array}{c}
 x_2 \\
 -J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1}k x_1 \\
 \end{array}
-\right] + {\bf B} u,
+\right] + {\bf B} u, \\
 \bf{B} := 
 \left[
 \begin{array}{c}
 0 \\
 J^{-1} \\
 \end{array}
-\right],
+\right], 
 {\bf C} := 
 \left[
 \begin{array}{c}
@@ -75,6 +76,7 @@ J^{-1} \\
 0 \\
 \end{array}
 \right]^T
+\end{array}
 $$
 
 Unknown damping and frictional coefficients are added to the expanded state vector as
