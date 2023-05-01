@@ -75,7 +75,7 @@ J^{-1} \\
 1 \\
 0 \\
 \end{array}
-\right]^T
+\right]^T.
 \end{array}
 $$
 
@@ -96,7 +96,7 @@ x_4 \\
 c \\
 \mu \\
 \end{array}
-\right]
+\right].
 $$
 
 After that, the dynamics is discretized for time to apply UKF ("./functions/c2d_func.m" [3]).
