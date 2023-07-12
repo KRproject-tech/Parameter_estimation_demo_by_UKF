@@ -48,6 +48,8 @@ end
 
 i_time = 1;
 P = P0;
+h_P = zeros(length( P(:)),length( time_m));
+h_P(:,1) = P(:);
 hx_hat = 0*hx;
 hy_hat = 0*hy;
 xhat = 0*x0;
@@ -63,6 +65,8 @@ for time = time_m(1:end-1)
     
     yhat = hd( xhat);
     hy_hat(:,i_time) = yhat;
+    h_P(:,i_time) = P(:);
+    
     
     i_time = i_time + 1;
 end
@@ -92,12 +96,19 @@ h_fig(2) = figure( 2);
 set( h_fig(2), 'Position', [ 610 100 600 400])
 h_ax(i_ax) = axes( 'Parent', h_fig(2));
 
-plot( h_ax(i_ax), time_m, hx(3,:), 'b-', time_m, hx(4,:), 'bo-', time_m, hx_hat(3,:), 'r-', time_m, hx_hat(4,:), 'ro-')
+sigma_c = sqrt( h_P(end-5,:));
+sigma_mu = sqrt( h_P(end,:));
+
+
+plot( h_ax(i_ax), time_m, hx(3,:), 'b-', time_m, hx(4,:), 'r-', time_m, hx_hat(3,:), 'b--', time_m, hx_hat(4,:), 'r--')
 xlabel( h_ax(i_ax), 'Time [-]')
 ylabel( h_ax(i_ax), 'Parameters [-]')
 grid( h_ax(i_ax), 'on')
+hold( h_ax(i_ax), 'on')
+patch( [ time_m fliplr( time_m)], [ hx_hat(3,:) + sigma_c fliplr(hx_hat(3,:) - sigma_c)], 'b', 'Facealpha', 0.3, 'LineStyle', 'none', 'Parent', h_ax(i_ax))
+patch( [ time_m fliplr( time_m)], [ hx_hat(4,:) + sigma_mu fliplr(hx_hat(4,:) - sigma_mu)], 'r', 'Facealpha', 0.3, 'LineStyle', 'none', 'Parent', h_ax(i_ax))
 
-legend( 'Damping ', 'Friction parameter', 'Estimated damping parameter', 'Estimated friction parameter', 4)
+legend( 'Damping ', 'Friction parameter', 'Estimated damping parameter', 'Estimated friction parameter', 'Location', 'southeast')
 i_ax = i_ax + 1;
 
 
@@ -112,5 +123,25 @@ grid( h_ax(i_ax), 'on')
 
 legend( 'Simulated ', 'Estimated')
 i_ax = i_ax + 1;
+
+
+
+
+%% save
+
+fig_name = { 'time_series_angle', 'identified_parameters', 'time_series_output'};
+
+
+for ii = 1:length( fig_name)
+    
+    saveas( h_fig(ii), [ './fig/', fig_name{ii}, '.fig'])
+    
+    set( h_fig(ii), 'PaperPositionMode', 'auto')
+    fig_pos = get( h_fig(ii), 'PaperPosition');
+    set( h_fig(ii), 'Papersize', [fig_pos(3) fig_pos(4)]);
+    saveas( h_fig(ii), [ './fig/', fig_name{ii}, '.pdf']) 
+end
+    
+
 
 
