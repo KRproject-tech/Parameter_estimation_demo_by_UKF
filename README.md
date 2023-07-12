@@ -124,9 +124,9 @@ Time series of state $x_1 := \theta (t)$.
 
 Time series of output $y(t) := x_1(t)$
 
-![identified](https://user-images.githubusercontent.com/114337358/193397390-ce971b27-1378-4827-be87-016376857eca.png)
+![identified_parameters](https://github.com/KRproject-tech/Parameter_estimation_demo_by_UKF/assets/114337358/44c5ceec-5d16-4fcb-8932-2e5c91548bbc)
 
-Identified damping and friction coefficients; $c$ and $\mu$, respectively.
+Identified damping and friction coefficients; $c$ and $\mu$, and deviations; $\sigma_c$ and $\sigma_\mu$, respectively. 
 
 
 
