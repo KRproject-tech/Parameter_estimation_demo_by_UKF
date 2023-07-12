@@ -81,10 +81,14 @@ h_fig(1) = figure( 1);
 set( h_fig(1), 'Position', [ 10 100 600 400])
 h_ax(i_ax) = axes( 'Parent', h_fig(1));
 
-plot( h_ax(i_ax), time_m, hx(1,:), 'bo-', time_m, hx_hat(1,:), 'r^-')
+sigma_theta = sqrt( h_P(1,:));
+
+plot( h_ax(i_ax), time_m, hx(1,:), 'b-', time_m, hx_hat(1,:), 'r--')
 xlabel( h_ax(i_ax), 'Time [-]')
 ylabel( h_ax(i_ax), 'Angle [rad]')
 grid( h_ax(i_ax), 'on')
+hold( h_ax(i_ax), 'on')
+patch( [ time_m fliplr( time_m)], [ hx_hat(1,:) + sigma_theta fliplr(hx_hat(1,:) - sigma_theta)], 'r', 'Facealpha', 0.3, 'LineStyle', 'none', 'Parent', h_ax(i_ax))
 
 legend( 'Simulated', 'Estimated')
 i_ax = i_ax + 1;
