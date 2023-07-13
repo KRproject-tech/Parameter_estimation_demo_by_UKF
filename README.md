@@ -101,7 +101,7 @@ $$
 
 After that, the dynamics is discretized for time to apply UKF ("./functions/c2d_func.m" [3]).
 
-![図1](https://github.com/KRproject-tech/Parameter_estimation_demo_by_UKF/assets/114337358/8c9ab9df-32be-4b50-9f1a-a0a2fc724bce)
+![図1](https://github.com/KRproject-tech/Parameter_estimation_demo_by_UKF/assets/114337358/c67f179f-8d55-4f0f-b6e1-c86732d4094c)
 
 
 
