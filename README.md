@@ -153,6 +153,29 @@ __[Step 1] Edit parameters__
 
 Edit code in "param_setting.m".
 
+Process model with the state-space representation ${\bf \dot{x}} = f( {\bf x}, {\bf u})$, observation model $y = {\bf C} {\bf x}$, and input $u(t)$ are defined in the "param_setting.m" as follows;
+
+````python
+%% system parameter
+%%[0] continuous time system
+J = 1;
+k = 1;
+f =@( x)[ x(2);
+          -1/J*x(3)*x(2) - 1/J*x(4)*sign( x(2)) - 1/J*k*x(1);
+          0;
+          0];
+B = [ 0;
+      1/J;
+      0;
+      0];
+bd = [ 1;
+       1;
+       0;
+       0];
+C = [ 1 0 0 0];
+ut = @( t)( 1.0);
+````
+
 __[Step 2] Start analysis__
 
 Execute "demo.m". 
