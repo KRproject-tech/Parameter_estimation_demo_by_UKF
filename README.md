@@ -151,7 +151,7 @@ x_2 \\
 0 \\
 0 \\
 \end{array}
-\right] + {\bf B}_E u, \\
+\right] + {\bf B_E} u, \\
 \bf{B}_E := 
 \left[
 \begin{array}{c}
