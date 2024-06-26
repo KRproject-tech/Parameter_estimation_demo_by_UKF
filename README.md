@@ -18,6 +18,46 @@ Example of dynamics is for the 1 DoF arm with spring, damping, and frictional fo
 Joint angle is measured, then, unknown damping and frictional coefficients are identified by UKF [^3][^4].
 In spite of discontinuous model of frictional force, UKF can be applied dislike Extended Kalman Filter (EKF). 
 
+
+## Publications
+
+This code was employed to estimate unknown parameters for the following publication(s):
+
+* Optimal swimming locomotion of snake-like robot in viscous fluids, Journal of Fluids and Structures, Vol. 123 (2023).  
+https://doi.org/10.1016/j.jfluidstructs.2023.104007
+
+````
+@article{YAMANO2023104007,
+title = {Optimal swimming locomotion of snake-like robot in viscous fluids},
+journal = {Journal of Fluids and Structures},
+volume = {123},
+pages = {104007},
+year = {2023},
+issn = {0889-9746},
+doi = {https://doi.org/10.1016/j.jfluidstructs.2023.104007},
+author = {A. Yamano and T. Kimoto and Y. Inoue and M. Chiba}
+}
+````
+
+* Fluid force identification acting on snake-like robots swimming in viscous fluids, Journal of Fluids and Structures, Vol. 106 (2021).
+https://doi.org/10.1016/j.jfluidstructs.2021.103351
+
+````
+@article{YAMANO2021103351,
+title = {Fluid force identification acting on snake-like robots swimming in viscous fluids},
+journal = {Journal of Fluids and Structures},
+volume = {106},
+pages = {103351},
+year = {2021},
+issn = {0889-9746},
+doi = {https://doi.org/10.1016/j.jfluidstructs.2021.103351},
+author = {A. Yamano and K. Shimizu and M. Chiba and H. Ijima},
+keywords = {Snake-like robot, Swimming motion, Highly viscous fluid, Unscented Kalman filter, Parameter estimation}
+}
+````
+
+
+
 ## Overview
 
 Dynamics for the 1 DoF arm with spring, damping, and frictional forces at a joint is denoted as follows,
