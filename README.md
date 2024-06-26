@@ -139,6 +139,41 @@ c \\
 \right].
 $$
 
+Then, the expanded state representation is obtained as
+
+$$
+\begin{array}{c}
+f( {\bf x_E}, {\bf u}) :=
+\left[
+\begin{array}{c}
+x_2 \\
+-J^{-1} c x_2 - J^{-1} \mu {\rm sgn} x_2 - J^{-1}k x_1 \\
+0 \\
+0 \\
+\end{array}
+\right] + {\bf B}_E u, \\
+\bf{B}_E := 
+\left[
+\begin{array}{c}
+0 \\
+J^{-1} \\
+0 \\
+0 \\
+\end{array}
+\right], 
+{\bf C}_E := 
+\left[
+\begin{array}{c}
+1 \\
+0 \\
+0 \\
+0 \\
+\end{array}
+\right]^T.
+\end{array}
+$$
+
+
 After that, the dynamics is discretized for time to apply UKF ("./functions/c2d_func.m" [3]).
 
 ![図1](https://github.com/KRproject-tech/Parameter_estimation_demo_by_UKF/assets/114337358/c67f179f-8d55-4f0f-b6e1-c86732d4094c)
