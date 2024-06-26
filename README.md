@@ -143,7 +143,16 @@ Then, the expanded state representation is obtained as
 
 $$
 \begin{array}{c}
-f( {\bf x_E}, {\bf u}) :=
+{\bf \dot{x}_E} = f_E( {\bf x_E}, {\bf u}), \\
+y = {\bf C_E} {\bf x_E},
+\end{array}
+$$
+
+where
+
+$$
+\begin{array}{c}
+f_E( {\bf x_E}, {\bf u}) :=
 \left[
 \begin{array}{c}
 x_2 \\
